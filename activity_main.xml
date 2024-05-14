@@ -2,46 +2,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.camera.view.PreviewView
-        android:id="@+id/cameraPreview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.camera.view.PreviewView>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/selectImages"
+        android:text="Select Images"/>
 
-    <ImageButton
-        android:layout_width="60sp"
-        android:layout_height="60sp"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectedTv"
+        android:layout_below="@id/selectImages"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40sp"
-        android:id="@+id/capture"
-        android:src="@drawable/round_camera_24"
-        android:scaleType="centerCrop"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:tint="#fff" />
+        android:layout_margin="4sp"/>
 
-    <ImageButton
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="10sp"
-        android:src="@drawable/baseline_flash_on_24"
-        android:tint="#fff"
-        android:id="@+id/toggleFlash"
-        android:background="?attr/selectableItemBackgroundBorderless"/>
-    <ImageButton
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        android:layout_below="@id/toggleFlash"
-        android:layout_marginEnd="10sp"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/flipCamera"
-        android:src="@drawable/round_flip_camera_android_24"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:tint="#fff"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectedTv"
+        android:layout_centerHorizontal="true"
+        android:text="Upload Images"
+        android:enabled="false"
+        android:id="@+id/uploadImages"/>
+
 </RelativeLayout>
